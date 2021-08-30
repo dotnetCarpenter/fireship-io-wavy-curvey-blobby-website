@@ -11,11 +11,11 @@
 	<style>
 		:root {
 			/* CSS HSL */
-			--xiketic: hsla(300, 29%, 6%, 1);
-			--light-cyan: hsla(179, 72%, 89%, 1);
-			--aero: hsla(209, 54%, 72%, 1);
-			--blue-bell: hsla(249, 23%, 66%, 1);
-			--razzmic-berry: hsla(306, 32%, 46%, 1);
+			--xiketic: hsla(300, 29%, 6%, 1); /* #140b14 */
+			--light-cyan: hsla(179, 72%, 89%, 1); /* #cff7f6 */
+			--aero: hsla(209, 54%, 72%, 1); /* #91b9de */
+			--blue-bell: hsla(249, 23%, 66%, 1); /* #9a94bc */
+			--razzmic-berry: hsla(306, 32%, 46%, 1); /* #9b5093 */
 		}
 
 		body {
@@ -35,8 +35,6 @@
 			flex-direction: column;
 			align-items: center;
 
-			/* min-height: 400rem;
-			padding: 100rem; */
 			min-height: calc(400rem / 16);
 			padding: calc(100rem / 16) 20vw;
 		}
@@ -47,9 +45,11 @@
 		.light-cyan {
 			background-color: var(--light-cyan);
 		}
+
 		.aero {
 			background-color: var(--aero);
 		}
+
 		.blue-bell {
 			background-color: var(--blue-bell);
 		}
@@ -84,6 +84,7 @@
 			z-index: 1;
 		}
 
+
 		.wave {
 			position: absolute;
 			top: 0;
@@ -101,6 +102,22 @@
 		}
 		.wave .shape-fill {
 			fill: var(--razzmic-berry);
+		}
+
+
+		.spacer {
+			aspect-ratio: 900/450;
+			width: 100%;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+		.layer1 {
+			background-image: url('layered-waves-haikei.svg');
+		}
+		.flip-svg {
+			margin-bottom: -1px;
+			transform: scaleY(-1);
 		}
 	</style>
 </head>
@@ -132,22 +149,26 @@
 		<p>Natus repellat totam a maiores soluta reiciendis repudiandae asperiores veniam unde nihil quas consequatur ex quis, sint corporis, officia minus id iusto ab recusandae, inventore ut harum! Odio, autem est?</p>
 	</section>
 
-	<section>
+	<div class="spacer layer1 flip-svg"></div>
+
+	<section class="aero">
 		<h1>Nice Curves</h1>
 		<p>Laborum, debitis! Consequuntur quas cumque porro eius ab quia quisquam. Repellendus itaque earum expedita non fugit. Veniam molestias adipisci accusamus sapiente quos aliquid assumenda, quam nobis, vitae ipsum at esse!</p>
 	</section>
 
-	<section class="blue-bell">
+	<div class="spacer layer1"></div>
+
+	<section>
 		<h1>Nice Curves</h1>
 		<p>Similique incidunt, vitae dicta dolore vel in soluta illum sed deleniti, deserunt quas repellat ut at. Impedit molestias magni reiciendis sint animi vel temporibus saepe, in consequuntur doloribus placeat? Praesentium!</p>
 	</section>
 
-	<section class="aero">
+	<section>
 		<h1>Nice Curves</h1>
 		<p>Quae iusto maiores et possimus corrupti perspiciatis dolores, libero, consequatur repellat accusantium, sit nobis error labore. Dolorum dolore facilis sed eligendi iste quos. Similique, placeat? Iusto unde reiciendis iste ipsam?</p>
 	</section>
 
-	<section class="light-cyan">
+	<section>
 		<h1>Nice Curves</h1>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem nemo incidunt nam qui dicta quia officia repellendus facere. Voluptatum vitae eligendi exercitationem odio cum excepturi veritatis unde a dolores tempore?</p>
 	</section>
