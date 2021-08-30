@@ -130,6 +130,21 @@
 			margin-bottom: -1px;
 			transform: rotate(180deg);
 		}
+
+		.blob-motion {
+			position: absolute;
+			transform: translateY(-20%);
+			z-index: 0;
+		}
+
+		.blob-content {
+			z-index: 1;
+		}
+
+		.blobs {
+			width: 100%;
+			background: url('./blobs.svg') no-repeat bottom / cover;
+		}
 	</style>
 </head>
 <body>
@@ -177,8 +192,18 @@
 	<div class="spacer layer2"></div>
 
 	<section class="light-cyan">
-		<h1>Nice Curves</h1>
-		<p>Quae iusto maiores et possimus corrupti perspiciatis dolores, libero, consequatur repellat accusantium, sit nobis error labore. Dolorum dolore facilis sed eligendi iste quos. Similique, placeat? Iusto unde reiciendis iste ipsam?</p>
+		<div class="blob-content">
+			<h1>Nice Curves</h1>
+			<p>Quae iusto maiores et possimus corrupti perspiciatis dolores, libero, consequatur repellat accusantium, sit nobis error labore. Dolorum dolore facilis sed eligendi iste quos. Similique, placeat? Iusto unde reiciendis iste ipsam?</p>
+		</div>
+		<svg class="blob-motion" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+			<g transform="translate(434.08160171402096 307.61344610770107)">
+				<path id="blob1" d="M96.2 -113.5C121.7 -70.7 137.4 -35.4 155 17.7C172.7 70.7 192.4 141.4 166.9 174.1C141.4 206.8 70.7 201.4 17.7 183.7C-35.4 166 -70.7 136 -96.7 103.4C-122.7 70.7 -139.4 35.4 -145.1 -5.8C-150.9 -46.9 -145.8 -93.8 -119.8 -136.6C-93.8 -179.5 -46.9 -218.2 -5.8 -212.5C35.4 -206.7 70.7 -156.4 96.2 -113.5" fill="#140b14"></path>
+			</g>
+			<g transform="translate(458.85026147399105 313.71524376270645)" style="visibility: hidden;">
+				<path id="blob2" d="M170.7 -164.2C213.2 -128.2 234.1 -64.1 224.1 -10C214.1 44.1 173.2 88.2 130.7 119.3C88.2 150.5 44.1 168.7 -3.7 172.4C-51.4 176 -102.8 165.1 -152.8 133.9C-202.8 102.8 -251.4 51.4 -243.4 8C-235.4 -35.4 -170.7 -70.7 -120.7 -106.7C-70.7 -142.7 -35.4 -179.4 14.4 -193.7C64.1 -208.1 128.2 -200.2 170.7 -164.2" fill="#140b14"></path>
+			</g>
+		</svg>
 	</section>
 
 	<div class="spacer layer3 flip-spacer"></div>
@@ -188,5 +213,17 @@
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem nemo incidunt nam qui dicta quia officia repellendus facere. Voluptatum vitae eligendi exercitationem odio cum excepturi veritatis unde a dolores tempore?</p>
 	</section>
 
+	<script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js" integrity="sha256-djMA3PhNFXq8E5a8C7LewmqcWubCqjny1nFxiPrqo9Q=" crossorigin="anonymous"></script>
+	<script>
+		'use strict';
+		const tween = KUTE.fromTo (
+			'#blob1',
+			{ path: '#blob1' },
+			{ path: '#blob2' },
+			{ repeat: Number.MAX_VALUE, duration: 2000, yoyo: true }
+		);
+
+		tween.start ();
+	</script>
 </body>
 </html>
