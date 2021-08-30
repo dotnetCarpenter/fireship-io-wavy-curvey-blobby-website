@@ -106,18 +106,29 @@
 
 
 		.spacer {
-			aspect-ratio: 900/450;
 			width: 100%;
 			background-repeat: no-repeat;
 			background-position: center;
 			background-size: cover;
 		}
 		.layer1 {
+			aspect-ratio: 900/450;
+
 			background-image: url('layered-waves-haikei.svg');
 		}
-		.flip-svg {
+		.layer2 {
+			aspect-ratio: 900/200;
+
+			background-image: url('xiketic-light-cyan.svg');
+		}
+		.layer3 {
+			aspect-ratio: 900/200;
+
+			background-image: url('blue-bell-light-cyan.svg');
+		}
+		.flip-spacer {
 			margin-bottom: -1px;
-			transform: scaleY(-1);
+			transform: rotate(180deg);
 		}
 	</style>
 </head>
@@ -149,7 +160,7 @@
 		<p>Natus repellat totam a maiores soluta reiciendis repudiandae asperiores veniam unde nihil quas consequatur ex quis, sint corporis, officia minus id iusto ab recusandae, inventore ut harum! Odio, autem est?</p>
 	</section>
 
-	<div class="spacer layer1 flip-svg"></div>
+	<div class="spacer layer1 flip-spacer"></div>
 
 	<section class="aero">
 		<h1>Nice Curves</h1>
@@ -163,12 +174,16 @@
 		<p>Similique incidunt, vitae dicta dolore vel in soluta illum sed deleniti, deserunt quas repellat ut at. Impedit molestias magni reiciendis sint animi vel temporibus saepe, in consequuntur doloribus placeat? Praesentium!</p>
 	</section>
 
-	<section>
+	<div class="spacer layer2"></div>
+
+	<section class="light-cyan">
 		<h1>Nice Curves</h1>
 		<p>Quae iusto maiores et possimus corrupti perspiciatis dolores, libero, consequatur repellat accusantium, sit nobis error labore. Dolorum dolore facilis sed eligendi iste quos. Similique, placeat? Iusto unde reiciendis iste ipsam?</p>
 	</section>
 
-	<section>
+	<div class="spacer layer3 flip-spacer"></div>
+
+	<section class="blue-bell">
 		<h1>Nice Curves</h1>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem nemo incidunt nam qui dicta quia officia repellendus facere. Voluptatum vitae eligendi exercitationem odio cum excepturi veritatis unde a dolores tempore?</p>
 	</section>
